@@ -1,0 +1,44 @@
+:root{
+  --bg:#0F172A;
+  --card:#1E293B;
+  --primary:#2563EB;
+  --accent:#06b6d4;
+  --text:#E6EEF8;
+  --muted:#9AA7BE;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+.container{max-width:1000px;margin:0 auto;padding:28px}
+.site-header{background:linear-gradient(90deg, rgba(14,23,34,0.6), rgba(7,12,20,0.6));border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;flex-direction:column;align-items:flex-start;padding:40px 28px}
+.name{font-family:Poppins, Inter,sans-serif;font-weight:700;font-size:28px;margin:0;color:var(--text)}
+.role{margin:6px 0 16px;color:var(--muted)}
+.social{display:flex;gap:12px;align-items:center}
+.social a{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px;border:1px solid transparent}
+.social a.resume{background:var(--primary);color:#fff}
+.social a:hover{transform:translateY(-2px)}
+main{padding:28px}
+.panel{background:transparent;padding:24px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.panel h2{font-family:Poppins;margin:0 0 12px;font-size:20px}
+.lead{color:var(--text);max-width:780px}
+.details{display:flex;gap:20px;color:var(--muted);margin-top:12px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.skill-card{background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.skill-card h3{margin:0 0 8px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.project{display:flex;gap:12px;background:var(--card);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);align-items:center}
+.project img{width:100px;height:80px;object-fit:cover;border-radius:6px}
+.project-content h3{margin:0 0 6px}
+.muted{color:var(--muted)}
+.meta{color:var(--muted);font-size:13px;margin-top:8px}
+.project-links a{color:var(--primary);margin-right:8px;text-decoration:none}
+.site-footer{padding:24px;text-align:center;color:var(--muted)}
+@media(max-width:640px){.header-inner{align-items:flex-start;padding:24px}.name{font-size:22px}.project{flex-direction:column;align-items:flex-start}.project img{width:100%;height:140px}}
+/* subtle fade-in */
+.panel{opacity:0;transform:translateY(8px);animation:fadeIn 700ms ease forwards}
+.panel:nth-of-type(1){animation-delay:120ms}
+.panel:nth-of-type(2){animation-delay:200ms}
+.panel:nth-of-type(3){animation-delay:280ms}
+.panel:nth-of-type(4){animation-delay:360ms}
+@keyframes fadeIn{to{opacity:1;transform:none}}
